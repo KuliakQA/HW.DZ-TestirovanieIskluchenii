@@ -15,10 +15,6 @@ public class ProductRepository {
         products = tmp;
     }
 
-    public Product[] findAll() {
-        return products;
-    }
-
     public Product[] getAll() {
         Product[] result = new Product[products.length];
         for (int i = 0; i < result.length; i++) {
@@ -26,6 +22,10 @@ public class ProductRepository {
             result[i] = products[index];
         }
         return result;
+    }
+
+    public Product[] findAll() {
+        return products;
     }
 
     public Product findById(int id) {
